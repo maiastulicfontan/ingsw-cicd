@@ -1,7 +1,7 @@
 language: java
 cache:
   directories:
-    - $HOME/.m2
+  - "$HOME/.m2"
 addons:
   sonarcloud:
     organization: maiastulicfontan2
@@ -11,9 +11,12 @@ notifications:
   slack:
     secure: rvYAxNA6S4mPnkiVvwjxD5oVhGOZ3hvLbGBn0PKASwD3qUW6AAviypJOQsCTimJUwYRxVaKazFlgEj0NUkuI2pzHEoXLVAXPZuwGQy6bsqIaIhcm7pPBhf3+F5TluoJBqX+tFH/1PFr820MgttOPXN6auPbvHCbYB1C6Nbh+Mo3w+BqSR4q6MGtKrsRa/vbj+r2JjRwKhwXNaVFPlQacX4Gq06LV8hlN0ZZAcQKHmqu9pHCWye/GsTLWt6nMGsA8uT8M6Uv0BtCDY80/Q8QzsLLDVWAv5kyAdf/8KZb0eYZNmEJARdeF7cBcJ7WvQVY0gtFUxSQJCkIoSCkUD/F4nLPcAYGA66tBpn03KmfG+luKWf1Kue6aON21s0hvZiKpuGRpnBbI6BeW7r84/2p4RhPUS6k1Q7y8K3Yf0FC3Yi00gutmNyHfAEWgegEw4AkXcCR3Ko59N8FAyy7lPxxhkvq5PJDMOOJg/87QoAAtOUH3nCN5X0RwqLN7VAOtH+FRWWryPKLbflRScgzObfIllxOpYKiXaJLKcWgZKJDX14+hCgTlcFiSz18ojl+2CGUuLbStJcrzjvSqizWEQ1i1o7mcj4EQBjx0D70EqNwXZYXmw2Zzm5STlv9xKwndDHSe2l1fk6bVfWEyGBVxgUWPLjsBcygr7Qgo8KadsvmNKy0=
   email:
-    recipients:
-      maiastulicfontan@gmail.com
+    recipients: maiastulicfontan@gmail.com
     on_success: always
     on_failure: always
+deploy:
+  provider: heroku
+  api_key:
+    secure: aR7gMoqKPq+/O4EcuYNMA3y+R6dedkQwcIB986JOz/dOgYbvvAKvhR2sM495odw66yWdPzPBf0XS/eXB9jd7heONacl7BtKVPI3T0bVtWv4+xIKjrtLAVq78TTiJcxOyuWMAu/6i1IIQhFEo0AAAUHmwhFnsOf2zdMpwMdk6RyDZcfKcBn1ZGkUo55p1RkNo/qJdQiCVeV9JM+6p5sFlIFWKJpkfkYXRu9RmmUGo59zqs6CGr5eaPJAQDBIrwZIkPa2HRr+bqGV956JlPpKm5v8ar7QRWQ9PFm11WFaXBBfou1+DzvOgIM3mN7O+huTkxMm5vEHhUsKILUJrAr0hsRycA0qI3vHxRYp0vbJJHmSkmcgiJLDpyh01Oq/L6GCowFwrqhet+cusPZ2VGUbRcroJKpYiF9KSQV2bevUUdWnhRkeZ1hpyK7ymovh2m90esdoe72HDeOYOsHQoeWrg6YMkSsupmIvWOA8rUXW5bR2r/DpbYBEQlc2UVvLZCPLYBK61SDp0AxDB1+3PnfgO2F1LuwOz1EJ0aO8kWeLbdNa8agibzHtRe2xCveH0DwZKpSrMKFK31N351tcUn9k/z7SuD9c9XxPD/ukaAExSITFRP9HJgLNR/Ks+zVW21YAdANhXl/HiikMwNlTBlRMP2TkeJ3ePzs7VAyuhA19b/q8=
 script:
 - mvn clean verify sonar:sonar -Pcoverage -Dsonar.projectKey=maiastulicfontan2_ingsw-cicd
