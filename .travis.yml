@@ -1,0 +1,12 @@
+language: java
+cache:
+  directories:
+    - $HOME/.m2
+addons:
+  sonarcloud:
+    organization: "maiastulicfontan2"
+    token:
+      secure: "onnb6iLt4OKA634YEQiKaK7xXDKjvnV3sS112wXBk3MGzT36JsJhJuanryRD79vcWtgSlHsT94AgfpJDWveNugWTZsy9UWcShKhcVjxCh9GSyOlw0wveRfP8TiCQArUc3VG4Qrg9U/Awgq498MORger+nXqYxjccScm8b5qFdhnWlFIIN22S4rNh9ZCUOGGQ+X91IrCoZ88TVktpAufel9lKHgHKcMPROVPsjfE2yQcjO72qzp/yk7b8dpMEYk2sWlKinkIXkhhhjRyMc0ykDphK4efTQwvoH08qas/5o1uI61ypmxm+GSNq3qWOapDv3yHFfaDNiov/Ne0Y1wHXpBy5DIcNbKe3mGX9MAgEKd0GgXu1ThwtxsbOndX4G61UspEx8nMfkQseSN6DR1a4Za2l5YHjO7B7GtUu52N2d4mBkKbwZHz5vvjAXT44pZDF4u8wkOfLWJLOADKX/JmQW2WhK6OIIUKCY/0vE9DBnmqLQ542VY1ws7sD7FJi6kvUTo4jK8VyYDyicV9DDqDypM1z3Iy33kzNueZVADdHr8wXlAB8Z5qwZ0loy9Jve+V7wBTZZNn/OYkzuUBPTt/be0/OlWjt0zvodNsbutEUEnuHTI0WcNkzMCWYeaGwbdJwT6HuVrzO3/dLUfzSsQyP34kLKSUymcAvay5YG7I3On8="
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - mvn clean verify sonar:sonar -Pcoverage -Dsonar.projectKey=maiastulicfontan2_ingsw-cicd
