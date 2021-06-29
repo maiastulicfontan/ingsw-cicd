@@ -18,6 +18,8 @@ deploy:
   provider: heroku
   api_key:
     secure: aR7gMoqKPq+/O4EcuYNMA3y+R6dedkQwcIB986JOz/dOgYbvvAKvhR2sM495odw66yWdPzPBf0XS/eXB9jd7heONacl7BtKVPI3T0bVtWv4+xIKjrtLAVq78TTiJcxOyuWMAu/6i1IIQhFEo0AAAUHmwhFnsOf2zdMpwMdk6RyDZcfKcBn1ZGkUo55p1RkNo/qJdQiCVeV9JM+6p5sFlIFWKJpkfkYXRu9RmmUGo59zqs6CGr5eaPJAQDBIrwZIkPa2HRr+bqGV956JlPpKm5v8ar7QRWQ9PFm11WFaXBBfou1+DzvOgIM3mN7O+huTkxMm5vEHhUsKILUJrAr0hsRycA0qI3vHxRYp0vbJJHmSkmcgiJLDpyh01Oq/L6GCowFwrqhet+cusPZ2VGUbRcroJKpYiF9KSQV2bevUUdWnhRkeZ1hpyK7ymovh2m90esdoe72HDeOYOsHQoeWrg6YMkSsupmIvWOA8rUXW5bR2r/DpbYBEQlc2UVvLZCPLYBK61SDp0AxDB1+3PnfgO2F1LuwOz1EJ0aO8kWeLbdNa8agibzHtRe2xCveH0DwZKpSrMKFK31N351tcUn9k/z7SuD9c9XxPD/ukaAExSITFRP9HJgLNR/Ks+zVW21YAdANhXl/HiikMwNlTBlRMP2TkeJ3ePzs7VAyuhA19b/q8=
-  branch: main
+  app: ingsw-cicd
+  on:
+    branch: main
 script:
 - mvn clean verify sonar:sonar -Pcoverage -Dsonar.projectKey=maiastulicfontan2_ingsw-cicd
