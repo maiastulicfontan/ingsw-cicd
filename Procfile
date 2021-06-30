@@ -1,1 +1,1 @@
-web: java -jar target/ingsw-cicd-1.0-SNAPSHOT.jar
+web: java -cp target/ingsw-cicd-1.0-SNAPSHOT.jar edu.ingsw.mstulicfontan.tpCICD
