@@ -1,1 +1,1 @@
-web: java -cp target/classes/:target/dependency/* edu.ingsw.mstulicfontan.tpCICD.App
+web: java -Dserver.port=$PORT -cp target/classes/:target/dependency/* edu.ingsw.mstulicfontan.tpCICD.App
