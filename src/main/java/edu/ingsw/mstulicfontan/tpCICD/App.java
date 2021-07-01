@@ -14,7 +14,7 @@ public class App {
     public App() {}
 
     protected int sumar(int a, int b) {
-        return a * b;
+        return a + b;
     }
 
     protected int dividir(int a, int b) {
@@ -22,7 +22,7 @@ public class App {
     }
 
     @RequestMapping("/")
-    String index() {
+    public String index() {
         String display;
         int a = random.nextInt(100);
         int b = random.nextInt(100);

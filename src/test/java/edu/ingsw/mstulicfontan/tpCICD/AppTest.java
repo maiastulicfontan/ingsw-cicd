@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 
 public class AppTest {
-    public App app;
+    private App app;
 
     @BeforeEach
     void setUp() {
