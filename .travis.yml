@@ -22,4 +22,4 @@ deploy:
   on:
     branch: main
 script:
-- mvn clean install sonar:sonar -Pcoverage -Dsonar.projectKey=maiastulicfontan2_ingsw-cicd
+- mvn clean verify sonar:sonar -Pcoverage -Dsonar.projectKey=maiastulicfontan2_ingsw-cicd
