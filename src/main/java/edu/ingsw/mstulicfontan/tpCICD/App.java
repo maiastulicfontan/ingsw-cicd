@@ -5,7 +5,7 @@ public class App {
     public App() {}
 
     protected int sumar(int a, int b) {
-        return a * b;
+        return a + b;
     }
 
     protected int dividir(int a, int b) {
@@ -15,7 +15,7 @@ public class App {
     public static void main(String[] args) {
         App app = new App();
 
-        System.out.println("Resultado: " + app.sumar(2,4));
+        app.sumar(2,4);
     }
 
 }
